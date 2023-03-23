@@ -1,0 +1,63 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int n;
+    printf("Enter n:");
+    scanf("%d",&n);
+    while(n>=1000)
+    {
+        printf("m");
+        n=n-1000;
+    }
+    while(n>=500&&n<1000)
+    {
+        printf("d");
+        n=n-500;
+    }
+    while(n>=100&&n<500)
+    {
+        printf("c");
+        n=n-100;
+    }
+    while(n>=50&&n<100)
+    {
+        printf("l");
+        n=n-50;
+    }
+    while(n>=10&&n<50)
+    {
+        printf("x");
+        n=n-10;
+    }
+    while(n>=5&&n<10)
+    {
+        printf("v");
+        n=n-5;
+    }
+    while(n<5&&n>0)
+    {
+        if(n==1)
+        {
+            printf("i");
+            break;
+        }
+         if(n==2)
+        {
+            printf("ii");
+            break;
+        }
+        if(n==3)
+        {
+            printf("iii");
+            break;
+        }
+        if(n==4)
+        {
+            printf("iv");
+            break;
+        }
+    }
+    getch();
+    return 0;
+}

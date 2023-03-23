@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing in browser JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Lorem ipsum dolor</h1>
+        <p id="para">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, cumque?
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero mollitia accusantium distinctio neque, repellat sed. Consequuntur ipsam error sint itaque sunt repudiandae dolor optio, pariatur facilis? Officiis eaque a repellat sequi non, praesentium excepturi aspernatur eum distinctio ipsam nesciunt ipsum delectus fugit animi iusto deleniti provident autem repudiandae vero. Dolores.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero commodi asperiores sapiente ad, iusto, aperiam distinctio sunt autem qui est quidem?</p>
+    </div>
+    <script>
+        console.log("Hello World");
+        let  a = 34;
+        let b = "Ritik";
+        console.log(a);
+        console.log(b);
+        console.log("\n");
+        console.log(`${b} is a good boy 'studies' at "MNNIT" allahabad, His roll number is ${a} `);
+        let len = b.length;
+        console.log(len);
+        console.log(a + " " + b +" " + len);
+        document.getElementById('para').innerHTML = '<h3>Libero mollitia</h3>';
+        let y = new String("this");
+        console.log(y);
+    </script>
+</body>
+</html>

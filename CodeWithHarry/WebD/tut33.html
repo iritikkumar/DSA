@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After pseudo selectors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    body{
+        font-family: 'Bree Serif', serif;
+        margin: 0px;
+        padding: 0px;
+        background-color: black;
+        color: white;
+        
+    }
+    header::before{
+        background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center/cover;
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.5;
+
+    }
+    .navigation{
+        font-size: 20px;
+        display: flex;
+        
+        /* justify-content: center; */
+    }
+    li{
+        list-style: none;
+        padding: 5px 23px;
+    }
+    section{
+        height: 344px;
+        /* border: 2px solid red; */
+        margin: 3px 230px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+
+    }
+    h1{
+        font-size: 3rem;
+    }
+    p{
+        text-align: center;
+    }
+    
+
+</style>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="items">Home</li>
+                <li class="items">About</li>
+                <li class="items">Services</li>
+                <li class="items">Contact Us</li>
+            </ul>
+        </nav>
+    </header>
+        <section>
+            <h1>Welcome to Coding World!</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae quis maiores aliquid et iste laudantium fuga id, modi laborum eum corrupti quas possimus voluptate cupiditate quibusdam iusto magni non dignissimos nulla illum dolorum odio? Quisquam, necessitatibus tenetur voluptate velit excepturi magni doloremque deserunt odio. </p>
+        </section>
+        <hr>
+    
+</body>
+</html>
