@@ -1,0 +1,39 @@
+class Solution {
+public:
+    void solve(int node, vector<vector<int>>& adj, vector<bool>& vis, vector<bool>& dfsVis, int& ans, vector<int>& dis){
+        vis[node] = 1;
+        dfsVis[node] = 1;
+        
+        for(auto it: adj[node]){
+            if(!vis[it]){
+                dis[it] = dis[node] + 1;
+                solve(it, adj, vis, dfsVis, ans, dis);
+            }
+            else if(dfsVis[it]){
+                ans = max(ans, dis[node]-dis[it]+1);
+            }
+        }
+        dfsVis[node] = 0;
+    }
+    int longestCycle(vector<int>& edges) {
+        int n = edges.size();
+        vector<vector<int>> adj(n);
+        for(int i=0;i<n;i++){
+            if(edges[i]!=-1){
+                adj[i].push_back(edges[i]);
+            }
+        }
+        vector<bool>vis(n,0),dfsVis(n,0);
+        vector<int> dis(n,0);
+        int ans = -1;
+        bool flag = false;
+        for(int i=0;i<n;i++){
+            if(!vis[i]){
+                dis[i] = 0;
+                solve(i,adj,vis,dfsVis,ans,dis);
+            }
+        }
+        if(ans==-1) return -1;
+        else return ans;
+    }
+};
